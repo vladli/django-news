@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-8%-i(v_*-dy5ua_*gjx7*go-0)h#%zn(su=5tp47e%!ziyb%n2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", ".vercel.app"]
 
@@ -131,6 +131,9 @@ STATICFILES_FINDERS = (
     "compressor.finders.CompressorFinder",
 )
 COMPRESS_PRECOMPILERS = (("text/x-scss", "django_libsass.SassCompiler"),)
+COMPRESS_OFFLINE = True
+LIBSASS_OUTPUT_STYLE = "compressed"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
