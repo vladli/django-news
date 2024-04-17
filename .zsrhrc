@@ -1,3 +1,5 @@
-alias runserver="python3 manage.py runserver"
-alias req="python3 -m pip freeze > requirements.txt"
-alias static="python manage.py collectstatic --clear"
+python3 manage.py runserver
+python3 -m pip freeze > requirements.txt
+
+python manage.py collectstatic --clear
+python manage.py compress
