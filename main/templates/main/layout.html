@@ -11,11 +11,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    {% compress css %}
+    <link
+      rel="stylesheet"
+      type="text/x-scss"
+      href="{% static 'main/css/main.scss' %}"
+    />
+    {% endcompress %}
     <title>{%block title%}{%endblock%}</title>
   </head>
   <body>
-    <main class="bg-red-400">{%block content%}{%endblock%}</main>
+    <main>{%block content%}{%endblock%}</main>
   </body>
 </html>
