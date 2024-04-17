@@ -1,1 +1,2 @@
 alias runserver="python3 manage.py runserver"
+alias req="python3 -m pip freeze > requirements.txt"
