@@ -140,8 +140,7 @@ STATICFILES_FINDERS = (
 
 COMPRESS_STORAGE = "compressor.storage.GzipCompressorFileStorage"
 COMPRESS_ENABLED = env.bool("COMPRESS_ENABLED")
-# Must enable this to use with Whitenoise
-COMPRESS_OFFLINE = env.bool("COMPRESS_OFFLINE")
+
 
 COMPRESS_PRECOMPILERS = (("text/x-scss", "django_libsass.SassCompiler"),)
 # Default primary key field type

@@ -2,4 +2,4 @@ python3 manage.py runserver
 python3 -m pip freeze > requirements.txt
 
 python manage.py collectstatic --clear
-python manage.py compress
+python manage.py compress --force
