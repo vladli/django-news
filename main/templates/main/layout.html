@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %}{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,10 +17,13 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    {% compress css %}
     <link
       rel="stylesheet"
-      href="{% static 'main/css/main.css' %}"
+      type="text/x-scss"
+      href="{% static 'main/css/main.scss' %}"
     />
+    {% endcompress %}
     <title>{%block title%}{%endblock%}</title>
   </head>
   <body>
