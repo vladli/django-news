@@ -1,0 +1,18 @@
+{% extends "main/layout.html" %}
+{% block title %}
+    {{ title }}
+{% endblock title %}
+{% block content %}
+    <div class="d-flex flex-column gap-4">
+        {% for item in news %}
+            <div class="bg-body-tertiary p-4 rounded">
+                <h3>
+                    {{ item.title }}
+                </h3>
+                <p>
+                    {{ item.content }}
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

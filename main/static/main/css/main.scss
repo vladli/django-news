@@ -1,5 +1,25 @@
 @import "./bootstrap/bootstrap";
 
-body {
-  background-color: $red-500;
+main {
+  width: 100%;
+}
+@include media-breakpoint-up(md) {
+  main {
+    width: 100%;
+  }
+}
+
+aside {
+  display: none;
+}
+@include media-breakpoint-up(md) {
+  aside {
+    width: 280px;
+    height: 100dvh;
+    border-right: 1px solid $secondary;
+  }
+}
+
+.nav-item :hover {
+  background-color: $secondary;
 }
